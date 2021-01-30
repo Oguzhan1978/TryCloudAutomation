@@ -1,18 +1,17 @@
-package com.trycloud.tests.TestCase;
+package com.trycloud.tests.UserStories;
 
 import com.trycloud.tests.base.TestBase;
 import com.trycloud.utilities.BrowserUtils;
 import com.trycloud.utilities.ConfigurationReader;
 import com.trycloud.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
-public class UserStory01 extends TestBase {
+public class LoginWithInvalidCredentials extends TestBase {
 
     @BeforeClass
     @Override
