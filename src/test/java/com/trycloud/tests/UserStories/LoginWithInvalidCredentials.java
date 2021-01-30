@@ -24,6 +24,7 @@ public class LoginWithInvalidCredentials extends TestBase {
 
     @Test
     public void Tc01() {
+        //
 
         driver.findElement(By.id("user")).sendKeys(ConfigurationReader.getProperty("invalidUsername"));
         driver.findElement(By.cssSelector("#password")).sendKeys(ConfigurationReader.getProperty("invalidPassword"));
