@@ -20,7 +20,9 @@ public abstract class TestBase {
         driver.manage().window().maximize();
         driver.get(ConfigurationReader.getProperty("url"));
         loginTryCloud();
+
     }
+
     public static void loginTryCloud(){
         driver.findElement(By.id("user")).sendKeys(ConfigurationReader.getProperty("username"));
         driver.findElement(By.cssSelector("#password")).sendKeys(ConfigurationReader.getProperty("password"));
