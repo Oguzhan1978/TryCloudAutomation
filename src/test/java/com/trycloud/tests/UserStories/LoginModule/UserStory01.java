@@ -1,4 +1,4 @@
-package com.trycloud.tests.UserStories;
+package com.trycloud.tests.UserStories.LoginModule;
 
 import com.trycloud.tests.base.TestBase;
 import com.trycloud.utilities.BrowserUtils;
@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
-public class LoginWithInvalidCredentials extends TestBase {
+public class UserStory01 extends TestBase {
 
     @BeforeClass
     @Override
@@ -22,9 +22,8 @@ public class LoginWithInvalidCredentials extends TestBase {
         driver.get(ConfigurationReader.getProperty("url"));
     }
 
-    @Test
+    @Test(description = "verify user cannot login with invalid credentials")
     public void Tc01() {
-        //
 
         driver.findElement(By.id("user")).sendKeys(ConfigurationReader.getProperty("invalidUsername"));
         driver.findElement(By.cssSelector("#password")).sendKeys(ConfigurationReader.getProperty("invalidPassword"));
