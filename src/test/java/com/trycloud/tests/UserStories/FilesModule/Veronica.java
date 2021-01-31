@@ -15,7 +15,7 @@ import java.util.List;
 public class Veronica extends TestBase {
 
     @Test(description = "User Story #3: As a user, I should be able to access to Files module")
-    public void verify_users_can_create_folder() {
+    public void tc06_verify_users_can_create_folder() {
         //1. Login as a user
 
         //2. Click the “+” icon on top
