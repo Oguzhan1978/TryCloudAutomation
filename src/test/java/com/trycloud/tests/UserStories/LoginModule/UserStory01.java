@@ -36,7 +36,7 @@ public class UserStory01 extends TestBase {
 
         String expectedTitle = "Trycloud - QA";
         String actualTitle = driver.getTitle();
-        System.out.println(actualTitle);
+
 
         Assert.assertEquals(actualMessage, expectedMessage);
         Assert.assertEquals(actualTitle, expectedTitle);
