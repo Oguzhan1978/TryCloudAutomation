@@ -3,6 +3,7 @@ package com.trycloud.tests.base;
 import com.trycloud.utilities.ConfigurationReader;
 import com.trycloud.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.*;
@@ -25,8 +26,8 @@ public abstract class TestBase {
 
     public static void loginTryCloud(){
         driver.findElement(By.id("user")).sendKeys(ConfigurationReader.getProperty("username"));
-        driver.findElement(By.cssSelector("#password")).sendKeys(ConfigurationReader.getProperty("password"));
-        driver.findElement(By.id("submit-form")).click();
+        driver.findElement(By.cssSelector("#password")).sendKeys(ConfigurationReader.getProperty("password"),Keys.ENTER);
+        //driver.findElement(By.id("submit-form")).click();
     }
 
 
