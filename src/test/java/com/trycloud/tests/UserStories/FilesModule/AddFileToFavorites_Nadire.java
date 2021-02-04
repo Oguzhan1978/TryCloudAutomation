@@ -40,8 +40,8 @@ public class AddFileToFavorites_Nadire extends TestBase {
         BrowserUtils.sleep(5);
 
         // 5.Verify the chosen file is listed on the table
-        Assert.assertNotNull( driver.findElement(By.id("file's locator")) ); //verify driver is able to find the expected file
-        // locator will be updated once the website is working
+        Assert.assertNotNull( driver.findElement(By.id("//span[@class='nametext']")) ); //verify driver is able to find the expected file
+
 
 
        
