@@ -49,13 +49,14 @@ public class TestCase2_Oguzhan extends TestBase {
         //filling info
         Faker faker = new Faker();
         phoneHomeInput.sendKeys(faker.phoneNumber().phoneNumber());
+        emailInput.sendKeys(faker.internet().emailAddress());
         BrowserUtils.sleep(2);
         addressInput.sendKeys(faker.address().streetAddress());
         BrowserUtils.sleep(2);
-        addressInput.sendKeys(faker.address().zipCode());
-        addressInput.sendKeys(faker.address().city());
-        addressInput.sendKeys(faker.address().stateAbbr());
-        addressInput.sendKeys(faker.address().country());
+        postalCode.sendKeys(faker.address().zipCode());
+        cityAddress.sendKeys(faker.address().city());
+        stateInput.sendKeys(faker.address().stateAbbr());
+        country.sendKeys(faker.address().country());
         BrowserUtils.sleep(2);
 
     }
