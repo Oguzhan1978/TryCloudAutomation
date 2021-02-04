@@ -91,10 +91,7 @@ public class UserCanSeeAllContactsNameInContactsList_Aibek extends TestBase {
         //creating fake country
         String fakeCountry = faker.address().country();
         countryBox.sendKeys(fakeCountry);
-/*
-        //locating on new contact link
-        WebElement newContactLink = driver.findElement(By.xpath("//button[@id='new-contact-button']"));
-        newContactLink.click();*/
+
     }
 
     @Test(description = "US-5, TC-3: user can see all contacts name in contacts list")
@@ -175,16 +172,13 @@ public class UserCanSeeAllContactsNameInContactsList_Aibek extends TestBase {
         //creating fake country
         String fakeCountry = faker.address().country();
         countryBox.sendKeys(fakeCountry);
-/*
-        //locating on new contact link
-        WebElement newContactLink = driver.findElement(By.xpath("//button[@id='new-contact-button']"));
-        newContactLink.click();*/
+
     }
 
     @Test
     public void contacts_list_name_verification() {
         //locating and finding contacts name and locating in List of WebElements
-
+        BrowserUtils.sleep(3);
         List<WebElement> contactsNames = driver.findElements(By.xpath("//div[@class='app-content-list-item-line-one']"));
         String contactName = "Jack Ma";
         for (WebElement eachContact : contactsNames) {
