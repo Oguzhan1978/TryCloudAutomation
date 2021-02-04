@@ -20,7 +20,7 @@ public class TestCase2_Oguzhan extends TestBase {
         driver = WebDriverFactory.getDriver(ConfigurationReader.getProperty("browser"));
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().window().maximize();
-        driver.get(ConfigurationReader.getProperty("url"));
+        driver.get(ConfigurationReader.getProperty("url")) ;
     }
 
     @Test(description = " verify users can add contacts")
