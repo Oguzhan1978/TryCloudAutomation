@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
-public class TestCase2 extends TestBase {
+public class TestCase2_Oguzhan extends TestBase {
 
     @BeforeClass
     @Override
