@@ -16,7 +16,7 @@ public class FileUpload {
             robot = new Robot();
         } catch (AWTException e) {
             e.printStackTrace();
-        }
+}
 
         // Cmd + Tab is needed since it launches a Java app and the browser looses focus
         robot.keyPress(KeyEvent.VK_META);

@@ -31,9 +31,11 @@ public class FeatureEgemen extends TestBase {
 
         //Upload File
         String fileName = "TryCloud-Assignment";
+        driver.findElement(By.cssSelector("label[for='file_upload_start']")).sendKeys("/Users/egemeneliz/Desktop/TryCloud-Assignment.pdf");
+        /*
         File file = new File("/Users/egemeneliz/Desktop/" + fileName + ".pdf");
         FileUpload.getUpload(file);
-        BrowserUtils.sleep(7);
+        BrowserUtils.sleep(7);*/
 
         //Verify file uploaded
         List<WebElement> fileList = driver.findElements(By.xpath("//span[@class='innernametext']"));
