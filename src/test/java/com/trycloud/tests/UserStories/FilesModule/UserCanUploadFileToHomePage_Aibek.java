@@ -25,18 +25,18 @@ public class UserCanUploadFileToHomePage_Aibek extends TestBase {
         WebElement uploadFileButton = driver.findElement(By.xpath("//span[@class='icon icon-add']"));
         uploadFileButton.click();
 
+        //file name and path
+        String fileName = "PictureOfBeautifulPlace";
+        String path = "C:\\Users\\aibek\\Downloads\\PictureOfBeautifulPlace.jpg";
+
         //locating on Upload file
         BrowserUtils.sleep(3);
         WebElement uploadFile = driver.findElement(By.xpath("//span[.='Upload file']"));
-        uploadFile.click();
 
         //File uploading
         BrowserUtils.sleep(3);
-        String fileName = "PictureOfBeautifulPlace";
-        String path = "C:\\Users\\aibek\\Downloads\\PictureOfBeautifulPlace.jpg";
-        File file = new File(path + fileName);
-        FileUpload.getUpload(file);
-
+        uploadFile.sendKeys(path);
+        uploadFile.click();
 
         //Verification that file uploaded
         BrowserUtils.sleep(3);
