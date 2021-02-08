@@ -4,6 +4,7 @@ import com.trycloud.tests.base.TestBase;
 import com.trycloud.utilities.BrowserUtils;
 import com.trycloud.utilities.FileUpload;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -20,34 +21,25 @@ public class UserCanUploadFileToHomePage_Aibek extends TestBase {
         WebElement filesModule = driver.findElement(By.xpath("(//li[@data-id='files'])[1]"));
         filesModule.click();
 
+        //locating path of chosen file
+        String path = "C:\\Users\\aibek\\Downloads\\Screenshot 2021-02-02 090805.png";
+
         //locating and clicking on '+' link
         BrowserUtils.sleep(3);
         WebElement uploadFileButton = driver.findElement(By.xpath("//span[@class='icon icon-add']"));
         uploadFileButton.click();
 
         //file name and path
-        String fileName = "PictureOfBeautifulPlace";
-        String path = "C:\\Users\\aibek\\Downloads\\PictureOfBeautifulPlace.jpg";
+        String fileName = "Screenshot 2021-02-02 090805";
 
         //locating on Upload file
         BrowserUtils.sleep(3);
         WebElement uploadFile = driver.findElement(By.xpath("//span[.='Upload file']"));
-
-        //File uploading
-        BrowserUtils.sleep(3);
         uploadFile.sendKeys(path);
-        uploadFile.click();
 
         //Verification that file uploaded
         BrowserUtils.sleep(3);
-        List<WebElement> filesList = driver.findElements(By.xpath("//span[@class='innernametext']"));
-        for (WebElement each : filesList) {
-            if (each.getText().equals(fileName)) {
-                Assert.assertEquals(each.getText(), fileName);
-                return;
-            }
-        }
-        Assert.fail("No such file displayed!");
+        Assert.assertEquals(uploadFile.getText(), fileName, "Uploaded file text verification FAILED!");
 
 
     }
